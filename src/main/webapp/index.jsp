@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Travel & Tourism</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script type="text/javascript">
@@ -23,11 +23,11 @@
     margin: 0;
   }
   .container {
-    background-color: #f5deb3;
+    background-color: #508d4e;
     width: 40%;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 11px 10px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 11px 10px 18px 0px rgba(0,0,0 ,0.75);
     text-align: center;
   }
   .logo {
@@ -46,8 +46,8 @@
 <div class="container">
   <img src="https://i.ibb.co/hLHjGNk/travel-LOGO.png" alt="travel-LOGO" class="logo">
   <div class="buttonContainer">
-    <button onClick="register()" class="btn btn-outline-secondary">REGISTER</button>
-    <button onClick="login()" class="btn btn-outline-primary">LOGIN</button>
+    <button onClick="register()" class="btn btn-dark">REGISTER</button>
+    <button onClick="login()" class="btn btn-primary">LOGIN</button>
   </div>
 </div>
 </body>
