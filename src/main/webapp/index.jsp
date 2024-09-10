@@ -15,7 +15,7 @@
 </script>
 <style>
   body {
-  background-image:url("https://static.vecteezy.com/system/resources/previews/008/347/339/original/world-travel-tour-map-vector.jpg");
+    background-image:url("https://static.vecteezy.com/system/resources/previews/008/347/339/original/world-travel-tour-map-vector.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
