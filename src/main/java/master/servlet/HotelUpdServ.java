@@ -8,20 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-
 /**
- * Servlet implementation class FoodDelServ
+ * Servlet implementation class FoodUpdServ
  */
-@WebServlet("/FoodDelServ")
-public class FoodDelServ extends HttpServlet {
+@WebServlet("/HotelUpdServ")
+public class HotelUpdServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
 
 	/**
-	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
