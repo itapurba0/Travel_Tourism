@@ -14,21 +14,21 @@ public class HotelDao {
 	   private String update_sql = "update food set fname=?,fprice=? where fid=?";
 	   
 	   
-//	   
-//	   public ResultSet getData() {
-//		      try {
-//		         ConnectionFactory con = new ConnectionFactory();
-//		         this.cn = con.getConn();
-//		         this.st = this.cn.createStatement();
-//		         this.rs = this.st.executeQuery(this.select_sql);
-//
-//		         
-//		      } catch (SQLException var2) {
-//		         var2.printStackTrace();
-//		      }
-//		      return rs;
-//
-//		   }
+	   
+	//    public ResultSet getData() {
+	// 	      try {
+	// 	         ConnectionFactory con = new ConnectionFactory();
+	// 	         this.cn = con.getConn();
+	// 	         this.st = this.cn.createStatement();
+	// 	         this.rs = this.st.executeQuery(this.select_sql);
+
+		         
+	// 	      } catch (SQLException var2) {
+	// 	         var2.printStackTrace();
+	// 	      }
+	// 	      return rs;
+
+	// 	   }
 //	
 //	   public void insertData(Dto fdto) {
 //		      try {
