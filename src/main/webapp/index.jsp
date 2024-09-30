@@ -46,7 +46,7 @@
 <div class="container">
   <img src="https://i.ibb.co/hLHjGNk/travel-LOGO.png" alt="travel-LOGO" class="logo">
   <div class="buttonContainer">
-    <button onClick="register()" class="btn btn-dark">REGISTER</button>
+    <button onClick="register()" class="btn btn-dark">REGISTER NOW</button>
     <button onClick="login()" class="btn btn-primary">LOGIN</button>
   </div>
 </div>
