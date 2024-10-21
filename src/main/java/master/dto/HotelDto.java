@@ -1,26 +1,27 @@
 package master.dto;
 
 public class HotelDto {
-   private String fid;
-   private String fname;
-   private double fprice;
-public String getFid() {
-	return fid;
-}
-public void setFid(String fid) {
-	this.fid = fid;
-}
-public String getFname() {
-	return fname;
-}
-public void setFname(String fname) {
-	this.fname = fname;
-}
-public double getFprice() {
-	return fprice;
-}
-public void setFprice(double fprice) {
-	this.fprice = fprice;
-}
+   private String hid;
+   private String hname;
+   private double tplace;
+   public String getHid() {
+	   return hid;
+   }
+   public void setHid(String hid) {
+	   this.hid = hid;
+   }
+   public String getHname() {
+	   return hname;
+   }
+   public void setHname(String hname) {
+	   this.hname = hname;
+   }
+   public double getTplace() {
+	   return tplace;
+   }
+   public void setTplace(double tplace) {
+	   this.tplace = tplace;
+   }
+   
    
 }
