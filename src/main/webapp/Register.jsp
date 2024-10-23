@@ -51,9 +51,9 @@
 <form action="RegisterServ" method="post">
     <h2>SIGNUP PAGE</h2>
 	<input type="text" class="form-control" placeholder="ENTER USERNAME" name="uname">
+	<input type="text" class="form-control" placeholder="ENTER EMAIL" name="email">
 	<input type="password" class="form-control" placeholder="ENTER PASSWORD" name="pass">
 	<input type="text" class="form-control" placeholder="ENTER YOUR NAME" name="nm">
-	<input type="text" class="form-control" placeholder="ENTER EMAIL" name="email">
 	<input type="text" class="form-control" placeholder="ENTER PHONE NUMBER" name="phno">
 	<button class="btn btn-outline-dark" style="width: 40%;">REGISTER</button>
 	</form>
