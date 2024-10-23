@@ -22,7 +22,25 @@ public class RegisterServ extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
+		response.setContentType("text/html");
+		String uname=request.getParameter("uname");
+		String email=request.getParameter("email");
+		String pass=request.getParameter("pass");
+		String nm=request.getParameter("nm");
+		String phno=request.getParameter("phno");
+		
+		RegisterDto rdto = new RegisterDto();
+		rdto.setUname(uname);
+		rdto.setEmail(email);
+		rdto.setPass(pass);
+		rdto.setNm(nm);
+		rdto.setPhno(phno);
+		
+		
+		
+		RegisterDao rdau=new RegisterDao();
+		rdau.insertData(rdto);
+		response.sendRedirect("Login.jsp");
 	}
 
 }
