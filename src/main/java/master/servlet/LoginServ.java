@@ -25,7 +25,27 @@ public class LoginServ extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+		String uname=request.getParameter("uname");
+		String pass=request.getParameter("pass");
+		PrintWriter out = response.getWriter();
+		RegisterDao rdau = new RegisterDao();
+		boolean flag=rdau.checkLogin(uname, pass);
+		if(pass.equals("admin") && uname.equals("admin"))
+		{
+			response.sendRedirect("NavAdmin.jsp");
+		}
+		else
+		{
+			if(flag==true)
+			{
+				response.sendRedirect("NavClient.jsp");
+			}
+			else
+			{
+				response.sendRedirect("Error.jsp");
+			}
+		}
 		
-
-}
+	}
 }

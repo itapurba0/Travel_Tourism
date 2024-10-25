@@ -56,28 +56,28 @@ public class RegisterDao {
 		      }
 
 		   }
-//	   public boolean checkLogin(String uname,String pass)
-//		{
-//			boolean flag=false;
-//			String sql="select * from register where uname='"+uname+"' and pass='"+pass+"'";
-//			try
-//			{
-//				ConnectionFactory con=new ConnectionFactory();
-//				cn=con.getConn();
-//			    st=cn.createStatement();
-//			    rs=st.executeQuery(sql);
-//			    if(rs.next())
-//			    {
-//			    	flag=true;
-//			    }
-//			 	
-//			}
-//			
-//			catch(SQLException se)
-//			{
-//				se.printStackTrace();
-//			}
-//			
-//			return flag;
-//		}
+	   public boolean checkLogin(String uname,String pass)
+		{
+			boolean flag=false;
+			String sql="select * from register where uname='"+uname+"' and pass='"+pass+"'";
+			try
+			{
+				ConnectionFactory con=new ConnectionFactory();
+				cn=con.getConn();
+			    st=cn.createStatement();
+			    rs=st.executeQuery(sql);
+			    if(rs.next())
+			    {
+			    	flag=true;
+			    }
+			 	
+			}
+			
+			catch(SQLException se)
+			{
+				se.printStackTrace();
+			}
+			
+			return flag;
+		}
 }
