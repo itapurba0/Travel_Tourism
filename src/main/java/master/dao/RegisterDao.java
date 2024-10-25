@@ -41,8 +41,8 @@ public class RegisterDao {
 	   public void insertData(RegisterDto rdto) {
 		      try {
 		         ConnectionFactory con = new ConnectionFactory();
-		         cn = con.getConn();
-		         ps = cn.prepareStatement(insert_sql);
+		         this.cn = con.getConn();
+		         ps = this.cn.prepareStatement(insert_sql);
 		         ps.setString(1, rdto.getUname());
 		         ps.setString(2, rdto.getEmail());
 		         ps.setString(3, rdto.getPass());
