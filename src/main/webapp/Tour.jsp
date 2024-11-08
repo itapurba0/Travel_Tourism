@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +51,7 @@
 	<div class="register-Container">
 		<form action="RegisterServ" method="post">
 			<input type="text" class="form-control" placeholder="TOUR ID" name="tid">
-			<input type="password" class="form-control" placeholder="TOUR NAME" name="tname">
+			<input type="text" class="form-control" placeholder="TOUR NAME" name="tname">
 			<label for="tplace1">CHOOSE TOUR PLACE 1:</label>
 				<select class="form-control" name="tplace1" id="tplace1">
   					<option>choose:</option>
@@ -75,8 +76,8 @@
   					<option value="AGRA">AGRA</option>
   					<option value="JAIPUR">JAIPUR</option>
 				</select>
-			<input type="password" class="form-control" placeholder="START DATE" name="stdt">
-			<input type="password" class="form-control" placeholder="PRICE" name="price">
+			<input type="text" class="form-control" placeholder="START DATE" name="stdt">
+			<input type="text" class="form-control" placeholder="PRICE" name="price">
 			<button class="btn btn-outline-dark" style="width: 40%;">ADD</button>
 		</form>
 	</div>
