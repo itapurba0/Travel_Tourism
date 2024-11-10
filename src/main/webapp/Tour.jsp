@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+    <jsp:include page="NavAdmin.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +8,7 @@
 <title>TOUR</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
-    body {
+    .main{
         background: #d6efd8;
         font-family: 'Georgia',serif;
         display: flex;
@@ -48,8 +48,9 @@
 </style>
 </head>
 <body>
+<div class="main">
 	<div class="register-Container">
-		<form action="RegisterServ" method="post">
+		<form action="TourServ" method="post">
 			<input type="text" class="form-control" placeholder="TOUR ID" name="tid">
 			<input type="text" class="form-control" placeholder="TOUR NAME" name="tname">
 			<label for="tplace1">CHOOSE TOUR PLACE 1:</label>
@@ -81,6 +82,6 @@
 			<button class="btn btn-outline-dark" style="width: 40%;">ADD</button>
 		</form>
 	</div>
-
+</div>
 </body>
 </html>
