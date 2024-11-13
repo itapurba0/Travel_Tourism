@@ -50,9 +50,9 @@
 <body>
 <div class="main">
 	<div class="register-Container">
-		<form action="RegisterServ" method="post">
+		<form action="HotelAddServ" method="post">
 			<input type="text" class="form-control" placeholder="HOTEL ID" name="hid">
-			<input type="password" class="form-control" placeholder="HOTEL NAME" name="hname">
+			<input type="text" class="form-control" placeholder="HOTEL NAME" name="hname">
 			<input type="text" class="form-control" placeholder="TOUR PLACE" name="tplace">
 			<button class="btn btn-outline-dark" style="width: 40%;">ADD</button>
 		</form>

@@ -65,8 +65,9 @@
 			<a href="TourDel.jsp">DELETE TOUR</a>
 			<a href="TourUpd.jsp">UPDATE TOUR</a>
 			<a href="Hotel.jsp">ADD HOTEL</a>
-			<a href="HotelDel.jsp">UPDATE HOTEL</a>
-			<a href="Hotel.jsp">LINK TOUR HOTEL</a>
+			<a href="HotelUpd.jsp">UPDATE HOTEL</a>
+			<a href="HotelDel.jsp">DELETE HOTEL</a>
+			<a href="TourHotel.jsp">LINK TOUR HOTEL</a>
 		</div>
 	</nav>
 	</body>

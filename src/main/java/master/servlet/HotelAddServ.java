@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import master.dao.HotelDao;
+import master.dao.TourDao;
+import master.dto.HotelDto;
+import master.dto.TourDto;
+
 
  /* Servlet implementation class FoodAddServ
  */
@@ -18,6 +23,19 @@ public class HotelAddServ extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+		String hid=request.getParameter("hid");
+		String hname=request.getParameter("hname");
+		String tplace=request.getParameter("tplace");
+		
+		HotelDto hdto = new HotelDto();
+		hdto.setHid(hid);
+		hdto.setHname(hname);
+		hdto.setTplace(tplace);
+		
+		
+		HotelDao hdao=new HotelDao();
+		hdao.insertData(hdto);
+		response.sendRedirect("NavAdmin.jsp");
 	}
 
 }

@@ -50,7 +50,7 @@
 <body>
 <div class="main">
 	<div class="register-Container">
-		<form action="RegisterServ" method="post">
+		<form action="HotelDelServ" method="post">
 			<input type="text" class="form-control" placeholder="HOTEL ID" name="hid">
 			<button class="btn btn-outline-dark" style="width: 40%;">DELETE</button>
 		</form>

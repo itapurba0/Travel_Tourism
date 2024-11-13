@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import master.dao.HotelDao;
+import master.dto.HotelDto;
+
 
 
 /**
@@ -25,6 +28,18 @@ public class HotelDelServ extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+		String hid=request.getParameter("hid");
+		
+		
+		HotelDto hdto = new HotelDto();
+		hdto.setHid(hid);
+		
+		
+		
+		HotelDao hdao=new HotelDao();
+		hdao.deleteData(hdto);
+		response.sendRedirect("NavAdmin.jsp");
 		
 	}
 
