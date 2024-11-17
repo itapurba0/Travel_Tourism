@@ -11,10 +11,10 @@ import master.dao.TourDao;
 import master.dto.TourDto;
 
 /**
- * Servlet implementation class TourServ
+ * Servlet implementation class TourUpdServ
  */
-@WebServlet("/TourServ")
-public class TourServ extends HttpServlet {
+@WebServlet("/TourUpdServ")
+public class TourUpdServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -24,26 +24,17 @@ public class TourServ extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		String tid=request.getParameter("tid");
-		String tname=request.getParameter("tname");
-		String tplace1=request.getParameter("tplace1");
-		String tplace2=request.getParameter("tplace2");
-		String tplace3=request.getParameter("tplace3");
 		String stdt=request.getParameter("stdt");
 		double price=Double.parseDouble(request.getParameter("price"));
 		TourDto tdto = new TourDto();
 		
 		tdto.setTid(tid);
-		tdto.setTname(tname);
-		tdto.setTplace1(tplace1);
-		tdto.setTplace2(tplace2);
-		tdto.setTplace3(tplace3);
 		tdto.setStdt(stdt);
 		tdto.setPrice(price);
 		
 		TourDao tdao=new TourDao();
-		tdao.insertData(tdto);
-		response.sendRedirect("Tour.jsp");
-
+		tdao.updateData(tdto);
+		response.sendRedirect("TourUpd.jsp");
 	}
 
 }

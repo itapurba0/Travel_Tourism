@@ -8,7 +8,7 @@ public class HotelDao {
 	   private Statement st = null;
 	   private PreparedStatement ps = null;
 	   private ResultSet rs = null;
-	   private String select_sql = "select * from food";
+	   private String select_sql = "select * from hotel";
 	   private String insert_sql = "insert into hotel values(?,?,?)";
 	   private String delete_sql = "delete from hotel where hid=?";
 	   private String update_sql = "update hotel set hname=?,Tplace=? where hid=?";
@@ -70,18 +70,18 @@ public class HotelDao {
 		      }
 
 		   }
-	//  public ResultSet getDataByName(String name) {
-//	        try {
-//	        	 ConnectionFactory con = new ConnectionFactory();
-//		         this.cn = con.getConn();
-//	            PreparedStatement ps = cn.prepareStatement("SELECT * FROM food WHERE fname = ?");
-//	            ps.setString(1, name);
-//	            rs = ps.executeQuery();
-//	        } catch (Exception e) {
-//	            e.printStackTrace();
-//	        }
-//	        return rs;
-//	    }
+	  public ResultSet getDataById(String hid) {
+	        try {
+	        	 ConnectionFactory con = new ConnectionFactory();
+		         this.cn = con.getConn();
+	            PreparedStatement ps = cn.prepareStatement("SELECT * FROM hotel WHERE hid = ?");
+	            ps.setString(1, hid);
+	            rs = ps.executeQuery();
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	        return rs;
+	    }
 
 
 }

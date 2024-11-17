@@ -17,8 +17,8 @@ public class TourDao {
 	   //private String select_sql = "select * from order_details";
 	   private String insert_sql="insert into tour values(?,?,?,?,?,?,?)";
 	  // private String billing_sql ="select o.oid,o.odt,f.fid,f.fname,o.oqty,f.fprice,o.oqty*f.fprice totalprice from food f,order_details o where f.fid=o.fid";
-	  // private String delete_sql = "delete from food where fid=?";
-	   //private String update_sql = "update food set fname=?,fprice=? where fid=?";
+	   private String delete_sql = "delete from tour where tid=?";
+	   private String update_sql = "update tour set stdt=?,price=? where tid=?";
 	   
 	   
 	   public void insertData(TourDto tdto)
@@ -45,24 +45,24 @@ public class TourDao {
 			}
 		}
 		
-//		public void deleteData(FoodDto fdto)
-//		{
-//			try
-//			{
-//				ConnectionFactory con = new ConnectionFactory();
-//				cn=con.getConn();
-//				ps=cn.prepareStatement(delete_sql);
-//				
-//				ps.setString(1,fdto.getFid());
-//				ps.executeUpdate();//Insert Data
-//			}
-//			
-//			catch(SQLException se)
-//			{
-//				se.printStackTrace();
-//			}
-//		}
-//		
+		public void deleteData(TourDto tdto)
+		{
+			try
+			{
+				ConnectionFactory con = new ConnectionFactory();
+				cn=con.getConn();
+				ps=cn.prepareStatement(delete_sql);
+				
+				ps.setString(1,tdto.getTid());
+				ps.executeUpdate();
+			}
+			
+			catch(SQLException se)
+			{
+				se.printStackTrace();
+			}
+		}
+		
 //		public ResultSet getData()
 //		{
 //			try
@@ -80,41 +80,41 @@ public class TourDao {
 //			return rs;
 //		}
 //		
-//		public void updateData(FoodDto fdto)
-//		{
-//			try
-//			{
-//				ConnectionFactory con = new ConnectionFactory();
-//				cn=con.getConn();
-//				ps=cn.prepareStatement(update_sql);
-//				
-//				ps.setString(3,fdto.getFid());
-//				ps.setString(1,fdto.getFname());
-//				ps.setDouble(2,fdto.getFprice());
-//				ps.executeUpdate();//Insert Data
-//			}
-//			
-//			catch(SQLException se)
-//			{
-//				se.printStackTrace();
-//			}
-//		}
+		public void updateData(TourDto tdto)
+		{
+			try
+			{
+				ConnectionFactory con = new ConnectionFactory();
+				cn=con.getConn();
+				ps=cn.prepareStatement(update_sql);
+				
+				ps.setString(3,tdto.getTid());
+				ps.setString(1,tdto.getStdt());
+				ps.setDouble(2,tdto.getPrice());
+				ps.executeUpdate();
+			}
+			
+			catch(SQLException se)
+			{
+				se.printStackTrace();
+			}
+		}
 //		
-//		public ResultSet searchData(String fname)
-//		{
-//			String sql="select * from food where fname='"+fname+"'";
-//			try
-//			{
-//				ConnectionFactory con = new ConnectionFactory();
-//				cn=con.getConn();
-//				st=cn.createStatement();
-//				rs=st.executeQuery(sql);
-//			}
-//			
-//			catch(SQLException se)
-//			{
-//				se.printStackTrace();
-//			}
-//			return rs;
-//		}
+		public ResultSet searchData(String tid)
+		{
+			String sql="select * from tour where tid= ?";
+			try
+			{
+				ConnectionFactory con = new ConnectionFactory();
+				cn=con.getConn();
+				st=cn.createStatement();
+				rs=st.executeQuery(sql);
+			}
+			
+			catch(SQLException se)
+			{
+				se.printStackTrace();
+			}
+			return rs;
+		}
 }

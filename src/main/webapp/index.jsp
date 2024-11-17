@@ -7,27 +7,31 @@
 
 <script type="text/javascript">
    function register(){
-	   window.open("Register.jsp");   
+	   window.location.href="Register.jsp";   
    }
    function login(){
-	   window.open("Login.jsp")
+	   window.location.href="Login.jsp";
    }
 </script>
 <style>
   body {
-    background-image:url("https://static.vecteezy.com/system/resources/previews/008/347/339/original/world-travel-tour-map-vector.jpg");
+    background: url("https://i.pinimg.com/736x/59/d0/6d/59d06d80a3fa55d696c4039e7703e0f9.jpg") no-repeat center center fixed; 
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width:100%;
     margin: 0;
   }
   .container {
-    background-color: #508d4e;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(32, 178, 170, 0.2); 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; 
+    border: 1px solid rgba(32, 178, 170, 0.3); 
+    border-radius: 25px;
     width: 40%;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 11px 10px 18px 0px rgba(0,0,0 ,0.75);
     text-align: center;
   }
   .logo {
@@ -40,14 +44,25 @@
     display: flex;
     justify-content: space-around;
   }
+   .btn {
+        border-radius: 15px;
+         outline-color: green; 
+         background-color: #d0f7f4; 
+       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+         } .btn:hover { 
+         background-color: #20b2aa; 
+         color: #fff; 
+         border: 1px solid rgba(32, 178, 170, 0.3);
+         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+         }
 </style>
 </head>
 <body>
 <div class="container">
   <img src="https://i.ibb.co/hLHjGNk/travel-LOGO.png" alt="travel-LOGO" class="logo">
   <div class="buttonContainer">
-    <button onClick="register()" class="btn btn-dark">REGISTER NOW</button>
-    <button onClick="login()" class="btn btn-primary">LOGIN</button>
+    <button onClick="register()" class="btn">REGISTER NOW</button>
+    <button onClick="login()" class="btn">LOGIN</button>
   </div>
 </div>
 </body>

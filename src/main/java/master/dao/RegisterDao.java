@@ -59,7 +59,7 @@ public class RegisterDao {
 	   public boolean checkLogin(String uname,String pass)
 		{
 			boolean flag=false;
-			String sql="select * from register where uname='"+uname+"' and pass='"+pass+"'";
+			String sql="select * from register where uname='"+uname+"' and password='"+pass+"'";
 			try
 			{
 				ConnectionFactory con=new ConnectionFactory();
