@@ -73,11 +73,11 @@
 	}
 		#tourDataContainer {
     		opacity: 0;
-    		transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    		transition: opacity 1s ease-in-out; 
 		}
 
 		#tourDataContainer.show {
-    		opacity: 1; /* Fade in effect */
+    		opacity: 1; 
 		}
 </style>
 </head>
