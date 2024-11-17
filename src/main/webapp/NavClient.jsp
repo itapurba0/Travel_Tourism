@@ -16,9 +16,9 @@ body {
 
 .mainContainer {
     backdrop-filter: blur(10px);
-    background-color: #00796b; /* Keeping the original color */
+    background-color: #00796b; 
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border: 1px solid #00796b; /* Keeping the original color */
+    border: 1px solid #00796b; 
     background-color: #00796b;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ body {
 }
 
 .leftContainer h2 {
-    color: #e0ffff; /* Light Cyan color */
+    color: #e0ffff;
     margin: 0;
     
 }
