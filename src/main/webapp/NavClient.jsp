@@ -11,6 +11,7 @@
 <style>
 body {
     font-family: 'Roboto', sans-serif;
+     overflow: hidden;
 }
 
 .mainContainer {
@@ -46,20 +47,22 @@ body {
     align-items: center;
 }
 .rightContainer a {
-    color: #e0ffff; /* Light Cyan color */
+    color: #e0ffff; 
     text-decoration: none;
     margin: 0 10px;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
    border-radius: 15px;
 }
 
 .rightContainer a:hover {
     background-color: #00796b;
-    color: #343a40;
-    text-decoration: inherit;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: box-shadow 0.6s ease;
+    color: #e0ffff;
+    text-decoration: blink;
 }
 
 .rightContainer a.active {

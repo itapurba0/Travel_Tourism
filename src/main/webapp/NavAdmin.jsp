@@ -11,13 +11,14 @@
 <style>
 body {
     font-family: 'Roboto', sans-serif;
+     overflow: hidden;
 }
 
 .mainContainer {
     backdrop-filter: blur(10px);
-    background-color: #00796b; /* Keeping the original color */
+    background-color: #00796b; 
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border: 1px solid #00796b; /* Keeping the original color */
+    border: 1px solid #00796b; 
     background-color: #00796b;
     display: flex;
     justify-content: space-between;
@@ -26,7 +27,7 @@ body {
 }
 
 .leftContainer h2 {
-    color: #e0ffff; /* Light Cyan color */
+    color: #e0ffff; 
     margin: 0;
     
 }
@@ -46,7 +47,7 @@ body {
     align-items: center;
 }
 .rightContainer a {
-    color: #e0ffff; /* Light Cyan color */
+    color: #e0ffff; 
     text-decoration: none;
     margin: 0 10px;
     padding: 5px 10px;
@@ -60,7 +61,7 @@ body {
     background-color: #00796b;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: box-shadow 0.6s ease;
-    color: #343a40;
+    color: #e0ffff;
     text-decoration: blink;
 }
 

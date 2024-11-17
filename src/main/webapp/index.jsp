@@ -44,16 +44,17 @@
     display: flex;
     justify-content: space-around;
   }
-   .btn {
+  .btn {
         border-radius: 15px;
          outline-color: green; 
-         background-color: #d0f7f4; 
-       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+         background-color:rgba(32, 178, 170, 0.2); 
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
          } .btn:hover { 
          background-color: #20b2aa; 
          color: #fff; 
          border: 1px solid rgba(32, 178, 170, 0.3);
          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+          transition: box-shadow 0.6s ease-in-out;
          }
 </style>
 </head>
