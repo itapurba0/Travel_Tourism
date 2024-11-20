@@ -32,6 +32,7 @@ body {
     
 }
 .leftContainer {
+	cursor: pointer;
     width: 20%;
     margin-left: 30px;
     display: flex;
@@ -95,6 +96,15 @@ body {
             });
         });
     });
+    document.addEventListener("DOMContentLoaded", function() {
+        const leftContainer = document.querySelector('.leftContainer');
+        
+        if (leftContainer) {
+            leftContainer.addEventListener('click', function() {
+                window.location.href = 'HomeAdmin.jsp';
+            });
+        }
+    });
 </script>
 </head>
 <body>
@@ -109,7 +119,6 @@ body {
         <a href="Hotel.jsp">ADD HOTEL</a>
         <a href="HotelUpd.jsp">UPDATE HOTEL</a>
         <a href="HotelDel.jsp">DELETE HOTEL</a>
-        <a href="TourHotel.jsp">LINK TOUR HOTEL</a>
     </div>
 </nav>
 </body>

@@ -32,6 +32,7 @@ body {
     
 }
 .leftContainer {
+    cursor: pointer;
     width: 20%;
     margin-left: 30px;
     display: flex;
@@ -95,12 +96,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const leftContainer = document.querySelector('.leftContainer');
+    
+    if (leftContainer) {
+        leftContainer.addEventListener('click', function() {
+            window.location.href = 'HomeClient.jsp';
+        });
+    }
+});
+
 </script>
 
 </head>
 	<body>
 	<div class="mainContainer">
-	
 		<div class="leftContainer">
 			<h2>TRAVElers</h2>
 		</div>

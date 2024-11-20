@@ -56,6 +56,7 @@ public class RegisterDao {
 		      }
 
 		   }
+	   
 	   public boolean checkLogin(String uname,String pass)
 		{
 			boolean flag=false;

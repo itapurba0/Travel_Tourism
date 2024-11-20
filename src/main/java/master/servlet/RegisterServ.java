@@ -42,5 +42,5 @@ public class RegisterServ extends HttpServlet {
 		rdau.insertData(rdto);
 		response.sendRedirect("Login.jsp");
 	}
+  }
 
-}

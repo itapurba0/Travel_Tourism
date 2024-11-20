@@ -33,13 +33,13 @@ public class LoginServ extends HttpServlet {
 		boolean flag=rdau.checkLogin(uname, pass);
 		if(pass.equals("admin") && uname.equals("admin"))
 		{
-			response.sendRedirect("NavAdmin.jsp");
+			response.sendRedirect("HomeAdmin.jsp");
 		}
 		else
 		{
 			if(flag==true)
 			{
-				response.sendRedirect("NavClient.jsp");
+				response.sendRedirect("HomeClient.jsp");
 			}
 			else
 			{

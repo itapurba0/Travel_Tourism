@@ -11,35 +11,35 @@ public class BookingDao {
 	   private PreparedStatement ps = null;
 	   private ResultSet rs = null;
 	   //private String select_sql = "select * from book";
-	   //private String insert_sql="insert into book(tid,hid1,hid2,hid3,roomtype,uname) values(?,?,?,?,?,?)";
+	   private String insert_sql="insert into book(tid,hotel1,hotel2,hotel3,room,uname,price,staus) values(?,?,?,?,?,?)";
 	   private String selectHotel_sql="select h.hname t.tplace1from tour_hotel h,tour t where h.place=t.tplace1";
 	  // private String billing_sql ="select o.oid,o.odt,f.fid,f.fname,o.oqty,f.fprice,o.oqty*f.fprice totalprice from food f,order_details o where f.fid=o.fid";
 	  // private String delete_sql = "delete from food where fid=?";
 	   //private String update_sql = "update food set fname=?,fprice=? where fid=?";
 	   
 	   
-//	   public void insertData(BookingDto bdto)
-//		{
-//			try
-//			{
-//				ConnectionFactory con = new ConnectionFactory();
-//				cn=con.getConn();
-//				ps=cn.prepareStatement(insert_sql);
-//				
-//				ps.setString(1,bdto.getTid());
-//				ps.setString(2,bdto.getHid1());
-//				ps.setString(3,bdto.getHid2());
-//				ps.setString(4,bdto.getHid3());
-//				ps.setString(5,bdto.getRoomtype());
-//				ps.setString(6,bdto.getUname());
-//				ps.executeUpdate();//Insert Data
-//			}
-//			
-//			catch(SQLException se)
-//			{
-//				se.printStackTrace();
-//			}
-//		}
+	   public void insertData(BookingDto bdto)
+		{
+			try
+			{
+				ConnectionFactory con = new ConnectionFactory();
+				cn=con.getConn();
+				ps=cn.prepareStatement(insert_sql);
+				
+				ps.setString(1,bdto.getTid());
+				ps.setString(2,bdto.getHid1());
+				ps.setString(3,bdto.getHid2());
+				ps.setString(4,bdto.getHid3());
+				ps.setString(5,bdto.getRoomtype());
+				ps.setString(6,bdto.getUname());
+				ps.executeUpdate();//Insert Data
+			}
+			
+			catch(SQLException se)
+			{
+				se.printStackTrace();
+			}
+		}
 	   
 	   public ResultSet getHotelData() {
 		   try
