@@ -31,7 +31,7 @@ public class HotelUpdServ extends HttpServlet {
 		HotelDto hdto = new HotelDto();
 		hdto.setHid(hid);
 		hdto.setHname(hname);
-		hdto.setTplace(tplace);
+		hdto.setPlace(tplace);
 		
 		
 		HotelDao hdao=new HotelDao();

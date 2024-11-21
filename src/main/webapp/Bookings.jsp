@@ -2,7 +2,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="master.dao.BookingDao" %>
 <%@ page import="master.dto.BookingDto" %>
-<jsp:include page="NavClient.jsp"></jsp:include>
+<jsp:include page="NavAdmin.jsp"></jsp:include>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,26 +79,21 @@
 <body>
 <div class="main">
     <div class="register-Container">
-        <h1>Your Booking Details</h1>
+        <h1>ALL BOOKINGS</h1>
         <%
-            String uname = (String) session.getAttribute("username");
-
-            if (uname == null) {
-                response.sendRedirect("login.jsp");
-            } else {
+           
                 BookingDao bdao = new BookingDao();
                 ResultSet rs = null;
-                boolean showButton = false;
-                double price = 0;
                 try {
-                    rs = bdao.bookingDetails(uname);
+                    rs = bdao.bookingDetails();
                     if (rs != null) {
         %>
         <table class="table">
             <tr>
-                <th>Booking ID</th>
-                <th>Tour ID</th>
-                <th>Tour Name</th>
+                <th>BookingID</th>
+                <th>UserName</th>
+                <th>TourID</th>
+                <th>TourName</th>
                 <th>Hotel 1</th>
                 <th>Hotel 2</th>
                 <th>Hotel 3</th>
@@ -109,14 +104,10 @@
             </tr>
             <%
                 while (rs.next()) {
-                    String status = rs.getString("status");
-                    if ("pending..".equals(status)) {
-                        showButton = true;
-                        price = rs.getDouble("price");
-                    }
             %>
             <tr>
                 <td><%= rs.getString("bid") %></td>
+				<td><%= rs.getString("uname") %></td>
                 <td><%= rs.getString("tid") %></td>
                 <td><%= rs.getString("tname") %></td>
                 <td><%= rs.getString("hotel1") %></td>
@@ -125,7 +116,7 @@
                 <td><%= rs.getString("room") %></td>
                 <td><%= rs.getString("stdt") %></td>
                 <td><%= rs.getDouble("price") %></td>
-                <td><%= status %></td>
+                <td><%= rs.getString("status") %></td>
             </tr>
             <%
                 }
@@ -138,12 +129,6 @@
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-                if (showButton) {
-        %>
-        <button type="button" class="btn" onclick="proceedToPay(<%= price %>)">Proceed to Pay</button>
-        <%
-                }
-            }
         %>
     </div>
 </div>

@@ -25,17 +25,17 @@ public class HotelAddServ extends HttpServlet {
 		response.setContentType("text/html");
 		String hid=request.getParameter("hid");
 		String hname=request.getParameter("hname");
-		String tplace=request.getParameter("tplace");
+		String place=request.getParameter("place");
 		
 		HotelDto hdto = new HotelDto();
 		hdto.setHid(hid);
 		hdto.setHname(hname);
-		hdto.setTplace(tplace);
+		hdto.setPlace(place);
 		
 		
 		HotelDao hdao=new HotelDao();
 		hdao.insertData(hdto);
-		response.sendRedirect("NavAdmin.jsp");
+		response.sendRedirect("Hotel.jsp");
 	}
 
 }

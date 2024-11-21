@@ -119,6 +119,7 @@ body {
         <a href="Hotel.jsp">ADD HOTEL</a>
         <a href="HotelUpd.jsp">UPDATE HOTEL</a>
         <a href="HotelDel.jsp">DELETE HOTEL</a>
+        <a href="Bookings.jsp">BOOKINGS</a>
     </div>
 </nav>
 </body>

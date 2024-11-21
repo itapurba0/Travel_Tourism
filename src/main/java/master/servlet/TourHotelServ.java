@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import master.dao.TourHotelDao2;
+import master.dao.TourHotelDao;
 
 @WebServlet("/TourHotelServ")
 public class TourHotelServ extends HttpServlet {
@@ -21,7 +21,7 @@ public class TourHotelServ extends HttpServlet {
         PrintWriter out = response.getWriter();
         String tid = request.getParameter("tid");
 
-        TourHotelDao2 dao = new TourHotelDao2();
+        TourHotelDao dao = new TourHotelDao();
         ResultSet rs = null;
         ResultSet rsHotel = null;
 
@@ -32,7 +32,7 @@ public class TourHotelServ extends HttpServlet {
                 for (int i = 1; i <= 3; i++) {
                     String tplace = rs.getString("tplace" + i);
                     out.println("<label for='tplace" + i + "'> Hotels in " + tplace + ":</label>");
-                    out.println("<select class='form-control' name='tplace" + i + "' id='tplace" + i + "'>");
+                    out.println("<select class='form-control' name='hotel" + i + "' id='tplace" + i + "'>");
                     out.println("<option value=''>choose: </option>");
 
                     rsHotel = dao.getHotels(tplace);

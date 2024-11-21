@@ -11,7 +11,7 @@ public class HotelDao {
 	   private String select_sql = "select * from hotel";
 	   private String insert_sql = "insert into hotel values(?,?,?)";
 	   private String delete_sql = "delete from hotel where hid=?";
-	   private String update_sql = "update hotel set hname=?,Tplace=? where hid=?";
+	   private String update_sql = "update hotel set hname=?,place=? where hid=?";
 	   
 	   
 	   
@@ -37,7 +37,7 @@ public class HotelDao {
 		         this.ps = this.cn.prepareStatement(this.insert_sql);
 		         this.ps.setString(1, hdto.getHid());
 		         this.ps.setString(2, hdto.getHname());
-		         this.ps.setString(3, hdto.getTplace());
+		         this.ps.setString(3, hdto.getPlace());
 		         this.ps.executeUpdate();
 		      } catch (SQLException var2) {
 		         var2.printStackTrace();
@@ -63,7 +63,7 @@ public class HotelDao {
 		         this.ps = this.cn.prepareStatement(this.update_sql);
 		         this.ps.setString(3, hdto.getHid());
 		         this.ps.setString(1, hdto.getHname());
-		         this.ps.setString(2, hdto.getTplace());
+		         this.ps.setString(2, hdto.getPlace());
 		         this.ps.executeUpdate();
 		      } catch (SQLException var2) {
 		         var2.printStackTrace();

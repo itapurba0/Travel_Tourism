@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import master.dao.RegisterDao;
 
@@ -39,13 +40,17 @@ public class LoginServ extends HttpServlet {
 		{
 			if(flag==true)
 			{
+			        HttpSession session = request.getSession();
+			        session.setAttribute("username", uname);
+
+				
 				response.sendRedirect("HomeClient.jsp");
-			}
-			else
-			{
-				response.sendRedirect("Error.jsp");
+
+				    
+				    } else {
+				        response.sendRedirect("login.jsp?error=invalidCredentials");
+				    }
+				}
+
 			}
 		}
-		
-	}
-}

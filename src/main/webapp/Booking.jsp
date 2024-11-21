@@ -84,12 +84,12 @@
 <body>
     <div class="main">
         <div class="CardContainer">
-            <form action="BookingServ">
+            <form action="BookingServ" method="post">
                 <input type="text" class="form-control" placeholder="TOUR ID" name="tid" id="tid" onchange="fetchTourData()">
                 <div id="tourDataContainer"></div>
                 <div id="hiddenFields" class="hidden-fields">
                     <label for="roomtype">ROOM TYPE:</label>
-                    <select class="form-control" name="roomtype" id="roomtype">
+                    <select class="form-control" name="room" id="roomtype">
                         <option value="">choose:</option>
                         <option value="NONE AC">NONE AC</option>
                         <option value="AC">AC</option>

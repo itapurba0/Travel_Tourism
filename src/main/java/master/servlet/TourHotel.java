@@ -29,7 +29,7 @@ public class TourHotel extends HttpServlet {
 		thdto.setTid(tid);
 		thdto.setHid(hid);
 		TourHotelDao thdao = new TourHotelDao();
-		thdao.insertData(thdto);
+		//thdao.insertData(thdto);
 		response.sendRedirect("TourHotel.jsp");
 	}
 

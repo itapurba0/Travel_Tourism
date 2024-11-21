@@ -3,7 +3,7 @@ package master.dto;
 public class HotelDto {
    private String hid;
    private String hname;
-   private String tplace;
+   private String place;
    public String getHid() {
 	   return hid;
    }
@@ -16,11 +16,11 @@ public class HotelDto {
    public void setHname(String hname) {
 	   this.hname = hname;
    }
-   public String getTplace() {
-	   return tplace;
+   public String getPlace() {
+	   return place;
    }
-   public void setTplace(String tplace) {
-	   this.tplace = tplace;
+   public void setPlace(String tplace) {
+	   this.place = tplace;
    }
    
    

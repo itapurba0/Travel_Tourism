@@ -72,7 +72,7 @@
 		<form action="HotelAddServ" method="post">
 			<input type="text" class="form-control" placeholder="HOTEL ID" name="hid" id="input">
 			<input type="text" class="form-control" placeholder="HOTEL NAME" name="hname" id="input">
-			<input type="text" class="form-control" placeholder="TOUR PLACE" name="tplace" id="input">
+			<input type="text" class="form-control" placeholder="TOUR PLACE" name="place" id="input">
 			<button class="btn" style="width: 40%;">ADD</button>
 		</form>
 	</div>
